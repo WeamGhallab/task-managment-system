@@ -1,0 +1,103 @@
+@import '../../../../styles/variables.scss';
+
+.banner {
+  height: 6rem;
+  background-color: $secondary-color;
+  display: flex;
+  padding: 18px 0;
+  justify-content: space-between;
+  direction: ltr;
+}
+.banner__inner-left {
+  width: 60%;
+  padding: 0.5rem 5rem;
+  background-color: $primary-color;
+  position: relative;
+  overflow: hidden;
+  color: $light-color;
+  text-align: end;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 80px solid $secondary-color;
+    border-left: 80px solid $primary-color;
+    width: 0;
+  }
+}
+.banner__inner-right {
+  text-align: end;
+  padding: 0.5rem;
+  color: $ternary-color;
+  width: 38%;
+  height: 90%;
+  margin-right: 20px;
+  position: relative;
+  background-color: $light-color;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -21px;
+    border-top: 80px solid $secondary-color;
+    border-right: 80px solid $light-color;
+    width: 0;
+  }
+}
+.card__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 6rem);
+}
+
+.card {
+  background-color: $light-color;
+  height: 80%;
+  width: 40%;
+  max-width: 30rem;
+  position: relative;
+  padding: 1rem;
+}
+
+.card__filter {
+  padding: 0.5rem;
+}
+
+.card__main-list {
+  color: $text-color;
+  overflow-y: auto;
+  height: 60%;
+  padding: 1rem;
+}
+
+.card__action {
+  position: absolute;
+  bottom: -2rem; //button radius
+  left: calc(50% - 2rem);
+}
+
+.checkbox__label {
+  font-size: 18px;
+}
+
+.checkbox__label.disabled {
+  color: $light-disabled-color;
+}
+
+.card__date {
+  padding: 0.5rem;
+}
+
+.date {
+  display: grid;
+  grid-template-columns: 45px 40px;
+  grid-template-rows: 20px 20px;
+  .date-day {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,54 @@
+@import '../../../../styles/variables.scss';
+
+button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 25px;
+  padding: 0.35rem;
+  border-radius: 6px;
+  color: $light-color;
+  font-size: 0.85rem;
+  min-width: 30px;
+}
+
+button.primary-button{
+  background-color: $primary-color;
+  &:active,&:hover{
+    background-color: $primary-active-color;
+  }
+}
+
+button.secondary-button{
+  background-color: $light-secondary-color;
+  &:active,&:hover{
+    background-color: $dark-secondary-color;
+  }
+}
+
+button.secondary-button.btn-rounded{
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  color: $secondary-active-color;
+  font-size: 2rem;
+  &:disabled{
+    color: $dark-color;
+  }
+}
+
+button:disabled{
+  background-color: $disabled-text-color;
+  color: $dark-color;
+  cursor:not-allowed;
+}
+
+.icon-img {
+  height: 20px;
+}
+
+.btn-img {
+  height: 30px;
+}

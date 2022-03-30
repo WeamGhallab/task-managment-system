@@ -1,0 +1,34 @@
+@import '../../../../styles/variables.scss';
+
+.main__container {
+  height: 100%;
+  margin: 0;
+  display: grid;
+  // grid-template-rows: 4rem auto 3rem;
+  // grid-template-areas: "header" "main" "footer";
+  grid-template-rows: 3rem auto;
+  grid-template-areas: "header" "main" ;
+}
+
+header {
+  background-color: $light-color;
+  grid-area: header;
+  padding: 0 20px;
+}
+
+main {
+  background-color: $back-ground-color;
+  section {
+    grid-area: main;
+    height: 100%;
+  }
+}
+
+footer {
+  background-color: $primary-color;
+  grid-area: footer;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

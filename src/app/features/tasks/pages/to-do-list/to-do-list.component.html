@@ -1,0 +1,64 @@
+<div class="banner">
+  <div class="banner__inner-left">
+    <p>نظام ادارة المهام</p>
+    <p>Task Managment System</p>
+  </div>
+  <div class="banner__inner-right flex-row align-items-center justify-content-end">
+    <p class="mx-1">{{'pageTitle.employeeManagement'|translate}}</p>
+    <app-button  image="/assets/images/twitter.png" btnClass="mx-1 primary-button" imgClass="btn-img"></app-button>
+  </div>
+</div>
+<div class="card__container">
+  <div class="card">
+    <div class="card__date flex-row align-items-center justify-content-space-between">
+      <div class="date">
+        <div class="date-day">{{today | date:'dd' }}</div>
+        <div class="date-month">{{today | localizedDate:'MMM' }}</div>
+        <div class="date-year">{{today | date:'yyyy' }}</div>
+      </div>
+      <div class="date-day">{{dayString}}</div>
+    </div>
+    <div class="card__filter flex-row align-items-center" >
+      <input [(ngModel)]="searchText" type="text" maxlength="300">
+      <app-button  (onClick)="onSearch()" label="search" btnClass="mx-1 primary-button" [disabled]="isAddButtonDisabled"></app-button>
+    </div>
+    <div class="card__main-list">
+      <form [formGroup]="tasksForm">
+        <div class="form-group">
+            <div formArrayName="tasksGroup">
+              <div class="my-3" *ngFor="let task of tasksForm.get('tasksGroup')['controls']; let i = index"  [formGroupName]="i">
+                <ng-container *ngIf="!f.tasksGroup['controls'][i].controls.editMode.value">
+                  <div class="w-100 flex-row align-items-center justify-content-space-between">
+                    <label (click)="onEnableEditMode(i)" class="checkbox__label" 
+                    [ngClass]="{'disabled':f.tasksGroup['controls'][i].controls.isChecked.value}">{{f.tasksGroup['controls'][i].controls.taskDetails.value}}</label>
+                    <app-checkbox  (onChecked)="onCheckedTask($event,i)" 
+                      [isChecked]="f.tasksGroup['controls'][i].controls.isChecked.value">
+                    </app-checkbox>
+                  </div>
+                </ng-container>
+                <ng-container *ngIf="f.tasksGroup['controls'][i].controls.editMode.value">
+                  <div class="w-100 flex-row my-1 form-group align-items-center">
+                    <input formControlName="taskDetails" type="text" maxlength="300" class="form-control">
+                    <app-button *ngIf="!(f.tasksGroup['controls'][i].controls.id.value)" (onClick)="onRemoveRecord(i)" image="/assets/images/delete.png" btnClass="mx-1 primary-button" imgClass="icon-img"></app-button>
+                    <app-button  (onClick)="onSaveChanges(i)" image="/assets/images/save.png" btnClass="mx-1 primary-button" imgClass="icon-img"></app-button>
+                    <app-button *ngIf="(f.tasksGroup['controls'][i].controls.id.value)" (onClick)="onDeleteTask(i)" image="/assets/images/delete.png" btnClass="mx-1 primary-button" imgClass="icon-img"></app-button>
+                    <app-button *ngIf="(f.tasksGroup['controls'][i].controls.id.value)" (onClick)="onCancelEditMode(i)" image="/assets/images/cancel.png" btnClass="mx-1 primary-button" imgClass="icon-img"></app-button>
+                  </div>
+                  <div class="invalid-feedback"
+                    *ngIf="f.tasksGroup['controls'][i].invalid && f.tasksGroup['controls'][i].touched">
+                    <app-validation-error [control]="f.tasksGroup['controls'][i].controls.taskDetails"
+                      customName="{{'Shared.Task'|translate}}">
+                    </app-validation-error>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+        </div>
+      </form>
+    </div>
+    <div class="card__action">
+      <app-button (onClick)="onAddNewRecord()" [disabled]="isAddButtonDisabled" label="+" btnClass="secondary-button btn-rounded"></app-button>
+    </div>
+  </div>
+</div>
+ 

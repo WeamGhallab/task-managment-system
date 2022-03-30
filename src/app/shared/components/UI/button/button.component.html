@@ -1,0 +1,4 @@
+<button type="button" [disabled]="disabled" (click)="onClickBtn()" class="{{btnClass}}">
+  {{label }}
+  <img class="{{imgClass}}" *ngIf="image" [src]='image'/>
+</button>

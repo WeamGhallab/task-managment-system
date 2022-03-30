@@ -1,0 +1,31 @@
+{
+  "Shared":{
+    "Task":"العمل"
+  },
+  "pageTitle":{
+    "employeeManagement":"ادارة الموظفين"
+  },
+  "ErrorMSG": {
+    "RequiredField": "{0} مطلوب",
+    "RequiredField_fm": "{0} مطلوبة",
+    "EmailField": "يجب أن يكون عنوان البريد الإلكتروني صحيح",
+    "MinValueField": "{0} أقل قيمة هي {1}",
+    "MaxValueField": "{0} أقصى قيمة هي {1}",
+    "MinlengthField": "{0} لابد ان يكون أقل عدد هو {1} حرف",
+    "MaxlengthField": "يجب أن لا يتجاوز عدد حروف {0} {1} حرف",
+    "MinContentSizeField": "{0} لابد أن يكون أقل حجم هو {1}",
+    "MaxContentSizeField": "{0} لابد أن يكون أقصى حجم هو {1}",
+    "MinNumberField": "{0} لابد أن يكون أقل رقم هو {1}",
+    "MaxNumberField": "{0} لابد أن يكون أقصى رقم هو {1}",
+    "PatternField": "يرجى إدخال {0} صحيح"
+  },
+  "Day":{
+    "Sunday":"الاحد",
+    "Monday":"الاثنين",
+    "Tuesday":"الثلاثاء",
+    "Wednesday":"الاربعاء",
+    "Thusday":"الخميس",
+    "Friday":"الجمعة",
+    "Saturday":"السبت"
+  }
+}

@@ -1,0 +1,116 @@
+@import './app/styles/variables.scss';
+
+
+.ltr{
+@import './app/styles/en.scss';
+}
+.rtl{
+  @import './app/styles/ar.scss';
+}
+
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  width: 3rem;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  font: inherit;
+  padding-left: 0.5rem;
+  min-width: 123px;
+}
+
+.form-group {
+}
+.form-control {
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-space-between {
+  justify-content: space-between;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.w-100 {
+  width: 100%;
+}
+
+.m-0 {
+  margin: 0;
+}
+.m-1 {
+  margin: 5px;
+}
+.m-2 {
+  margin: 10px;
+}
+.m-3 {
+  margin: 15px;
+}
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.my-1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.my-2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.my-3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mx-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+.mx-1 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.mx-2 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mx-3 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.invalid-feedback {
+  color: red;
+}
+
+

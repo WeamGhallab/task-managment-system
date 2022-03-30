@@ -1,0 +1,31 @@
+{
+  "Shared":{
+    "Task":"Task"
+  },
+  "pageTitle":{
+    "employeeManagement":"Staff management"
+  },
+  "ErrorMSG": {
+    "RequiredField": "{0} is required",
+    "RequiredField_fm": "{0} is required",
+    "EmailField": "{0} must be a valid email address",
+    "MinValueField": "{0} minimum values is {1}",
+    "MaxValueField": "{0} maximum values is {1}",
+    "MinlengthField": "{0} should have minimum {1} characters",
+    "MaxlengthField": "{0} should have maximum {1} characters",
+    "MinContentSizeField": "{0} should have minimum size of {1} characters",
+    "MaxContentSizeField": "{0} should have maximum size of {1} characters",
+    "MinNumberField": "{0} minimum values is {1}",
+    "MaxNumberField": "{0} maximum values is {1}",
+    "PatternField": "{0} have incorrect format"
+  },
+  "Day":{
+    "Sunday":"Sunday",
+    "Monday":"Monday",
+    "Tuesday":"Tuesday",
+    "Wednesday":"Wednesday",
+    "Thusday":"Thusday",
+    "Friday":"Friday",
+    "Saturday":"Saturday"
+  }
+}
